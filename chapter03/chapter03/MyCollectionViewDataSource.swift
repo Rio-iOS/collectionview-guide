@@ -1,34 +1,34 @@
 //
 //  MyCollectionViewDataSource.swift
-//  chapter02-horizontal
+//  chapter03
 //
-//  Created by 藤門莉生 on 2024/07/22.
+//  Created by 藤門莉生 on 2024/07/25.
 //
 
 import Foundation
 import UIKit
 
-// UICollectionDataSource: UICollectionViewに表示する内容を指定するためのプロトコル
 class MyCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     private weak var repository: MyItemRepository!
     
     init(repository: MyItemRepository!) {
         self.repository = repository
-        super.init()
     }
-   
-    // アイテム数
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        repository.numberOfItems()
+        repository.numberOfItems(inSection: section)
     }
-   
-    // データを表示するためのセルをUICollectionViewCell型で返す
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = repository.item(at: indexPath.item)
+        let item = repository.item(at: indexPath)
         return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
     }
    
-    // セルの登録
+    // 複数のセクションを扱う
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        repository.numberOfSections()
+    }
+    
     private let cellRegistration = UICollectionView.CellRegistration<MyCollectionViewCell, MyItem> { cell, indexPath, item in
         cell.name = item.name
     }

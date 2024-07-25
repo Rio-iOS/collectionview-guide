@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  chapter02-horizontal
+//  chapter03
 //
-//  Created by 藤門莉生 on 2024/07/22.
+//  Created by 藤門莉生 on 2024/07/25.
 //
 
 import UIKit
@@ -34,11 +34,10 @@ private extension MyViewController {
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            collectionView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 150),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
 }

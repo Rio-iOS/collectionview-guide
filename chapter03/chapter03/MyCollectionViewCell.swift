@@ -1,21 +1,15 @@
 //
 //  MyCollectionViewCell.swift
-//  chapter02-horizontal
+//  chapter03
 //
-//  Created by 藤門莉生 on 2024/07/22.
+//  Created by 藤門莉生 on 2024/07/25.
 //
 
 import Foundation
 import UIKit
 
 final class MyCollectionViewCell: UICollectionViewCell {
-    private lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.layer.borderColor = UIColor.black.cgColor
-        label.layer.borderWidth = 1.0
-        return label
-    }()
+    private let nameLabel = UILabel()
     
     var name: String? {
         didSet {
@@ -31,13 +25,13 @@ final class MyCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-   
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         name = nil
     }
     
-    private func setupConstraints() {
+    func setupConstraints() {
         contentView.addSubview(nameLabel)
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
