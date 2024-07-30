@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  chapter03
+//  chapter03-diffalable-datasource
 //
 //  Created by 藤門莉生 on 2024/07/25.
 //
@@ -13,7 +13,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let viewController = MyViewController()
