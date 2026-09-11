@@ -1,0 +1,86 @@
+[
+  {
+    "kind": "app",
+    "name": "chapter02-horizontal",
+    "scheme": "chapter02-horizontal",
+    "project": "chapter02-horizontal/chapter02-horizontal.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter02",
+    "scheme": "chapter02",
+    "project": "chapter02/chapter02.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter03-diffalable-datasource-multi-section",
+    "scheme": "chapter03-diffalable-datasource-multi-section",
+    "project": "chapter03-diffalable-datasource-multi-section/chapter03-diffalable-datasource-multi-section.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter03-diffalable-datasource",
+    "scheme": "chapter03-diffalable-datasource",
+    "project": "chapter03-diffalable-datasource/chapter03-diffalable-datasource.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter03",
+    "scheme": "chapter03",
+    "project": "chapter03/chapter03.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter04-mutil-cell",
+    "scheme": "chapter04-mutil-cell",
+    "project": "chapter04-mutil-cell/chapter04-mutil-cell.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter04-using-cell-registration",
+    "scheme": "chapter04-using-cell-registration",
+    "project": "chapter04-using-cell-registration/chapter04-using-cell-registration.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter04-using-content-configuration",
+    "scheme": "chapter04-using-content-configuration",
+    "project": "chapter04-using-content-configuration/chapter04-using-content-configuration.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter04",
+    "scheme": "chapter04",
+    "project": "chapter04/chapter04.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter05-group-nest",
+    "scheme": "chapter05-group-nest",
+    "project": "chapter05-group-nest/chapter05-group-nest.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter05",
+    "scheme": "chapter05",
+    "project": "chapter05/chapter05.xcodeproj",
+    "workspace": null
+  },
+  {
+    "kind": "app",
+    "name": "chapter06",
+    "scheme": "chapter06",
+    "project": "chapter06/chapter06.xcodeproj",
+    "workspace": null
+  }
+]
