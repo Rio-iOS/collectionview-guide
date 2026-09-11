@@ -44,6 +44,16 @@ swift Scripts/verify.swift --index 0
 
 `Quality` ワークフローは上記と同じ一覧・スクリプトを使い、対象ごとにビルドまたはテストを実行します。ビルドの成功だけでは、画面表示、アクセシビリティ、通信先の動作、テスト網羅性は保証されません。UIサンプルはSimulator上での操作確認も必要です。
 
+## 振る舞いの回帰テスト
+
+MyContentViewは初期化とconfigurationの再設定で同じ反映処理を使います。異なる種類のconfigurationを受け取ったときは古い文字を消し、Dynamic Typeと複数行の表示に対応します。
+
+実際のUIViewで初期表示、再利用、非対応configuration、狭い幅と大きい文字サイズを検証します。
+
+```sh
+swift Scripts/test-layout.swift
+```
+
 ## Swiftコード品質
 
 [設計・命名・所有関係の方針と、この教材への適用範囲](SWIFT-QUALITY.md)を参照してください。

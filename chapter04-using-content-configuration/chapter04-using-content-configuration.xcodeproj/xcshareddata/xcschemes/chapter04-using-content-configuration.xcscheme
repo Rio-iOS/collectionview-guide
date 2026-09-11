@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7B09D5DE74C98EDE77D40DBF"
+               BuildableName = "ContentConfigurationTests.xctest"
+               BlueprintName = "ContentConfigurationTests"
+               ReferencedContainer = "container:chapter04-using-content-configuration.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -5,9 +5,6 @@ import UIKit
 struct MyContentConfiguration: UIContentConfiguration {
     let name: String
     
-    private let cellRegistration = UICollectionView.CellRegistration<UICollectionViewCell, MyItem> { cell, indexPath, item in
-        cell.contentConfiguration = MyContentConfiguration(name: item.name)
-    }
    
     // makeContentView()で返すMyContentViewクラスを実装
     // UIViewクラスのサブクラスであり、なおかつ UIContentViewプロトコルを実装している必要がある。
@@ -33,12 +30,7 @@ final class MyContentView: UIView, UIContentView {
     // 普通のビューを作るように実装できる。
     // また、データの受け渡しの方法も configurationとしてまとめられている。
     var configuration: UIContentConfiguration {
-        didSet {
-            guard let configuration = configuration as? MyContentConfiguration else {
-                return
-            }
-            nameLabel.text = configuration.name
-        }
+        didSet { applyConfiguration() }
     }
    
     //  今回の実装では、イニシャライザでconfigurationを受け取れるようにしている。
@@ -46,13 +38,22 @@ final class MyContentView: UIView, UIContentView {
         self.configuration = configuration
         super.init(frame: .zero)
         setupConstraints()
+        applyConfiguration()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// 初期化と再設定で共通の表示更新を使い、別の設定型を受け取った場合は以前の値を残しません。
+    private func applyConfiguration() {
+        nameLabel.text = (configuration as? MyContentConfiguration)?.name
+    }
+
     private func setupConstraints() {
+        nameLabel.font = .preferredFont(forTextStyle: .body)
+        nameLabel.adjustsFontForContentSizeCategory = true
+        nameLabel.numberOfLines = 0
         addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

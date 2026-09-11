@@ -4,6 +4,10 @@
 
 Collection ViewのAPI・レイアウトを比較する教材です。継承が不要な画面をfinalにし、未使用の外部公開を減らしています。MyItemRepositoryのファイル名を型名に合わせています。レイアウトだけの例はUIKitのdata source・delegateの構造を維持します。
 
+MyContentViewは初期化とconfigurationの再設定で同じ反映処理を使います。異なる種類のconfigurationを受け取ったときは古い文字を消し、Dynamic Typeと複数行の表示に対応します。
+
+実際のUIViewで初期表示、再利用、非対応configuration、狭い幅と大きい文字サイズを検証します。
+
 ## 共通の設計基準
 
 - 型・メンバーは必要な範囲だけに公開します。内部状態は`private`、外部から読む状態は必要に応じて`private(set)`にします。プロトコルの要件、Storyboardの接続、サブクラスからの利用を確認して変更します。
