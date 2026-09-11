@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyViewController: UIViewController {
+final class MyViewController: UIViewController {
     private let repository = MyItemRepository()
     private var collectionView: UICollectionView!
     // MyCollectionViewDataSourceを保持する代わりに
@@ -15,25 +15,25 @@ class MyViewController: UIViewController {
     // UICollectionViewDiffableDataSourceはジェネリック型で、
     // セクションの識別子の型とアイテムの識別子の型を指定
     private var dataSource: UICollectionViewDiffableDataSource<Int, MyItem.ID>!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         collectionView = UICollectionView(
             frame: .zero,
             collectionViewLayout: makeCollectionViewLayout()
         )
-        
+
         setupConstraints()
-       
+
         // UICollectionViewのdataSourceプロパティを直接設定する必要はなくなっている
         // UICollectionViewDiffableDiffableDataSourceの内部でその処理が行われているため
         dataSource = makeDataSource(for: collectionView, repository: repository)
-      
+
         // reloadData()メソッドを呼ぶ代わりに、applySnapshot()メソッドを呼ぶ
         applySnapshot()
     }
-    
+
     private func setupConstraints() {
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false

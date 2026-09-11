@@ -7,30 +7,30 @@
 
 import UIKit
 
-class MyViewController: UIViewController {
+final class MyViewController: UIViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<MySection, MyItem.ID>
     typealias Snapshot = NSDiffableDataSourceSnapshot<MySection, MyItem.ID>
-    
+
     private let repository = MyItemRepository()
     private var collectionView: UICollectionView!
     private var dataSource: DataSource!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         collectionView = .init(
             frame: .zero,
             collectionViewLayout: makeMyCollectionViewLayout()
         )
         collectionView.delegate = self
-    
+
         dataSource = makeDataSource(
             for: collectionView,
             repository: repository
         )
-        
+
         applySnapshot()
-        
+
         view = collectionView
     }
 

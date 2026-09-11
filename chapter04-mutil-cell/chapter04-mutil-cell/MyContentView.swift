@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 
 struct MyContentConfiguration: UIContentConfiguration {
-    
+
     let name: String
-    
+
     private let cellRegistration = UICollectionView.CellRegistration<UICollectionViewCell, MyItem> { cell, indexPath, item in
         cell.contentConfiguration = MyContentConfiguration(name: item.name)
     }
-    
+
     func makeContentView() -> any UIView & UIContentView {
         MyContentView(configuration: self)
     }
@@ -25,9 +25,9 @@ struct MyContentConfiguration: UIContentConfiguration {
     }
 }
 
-class MyContentView: UIView, UIContentView {
+final class MyContentView: UIView, UIContentView {
     private let nameLabel = UILabel()
-    
+
     var configuration: UIContentConfiguration {
         didSet {
             guard let configuration = configuration as? MyContentConfiguration else {
@@ -36,17 +36,17 @@ class MyContentView: UIView, UIContentView {
             nameLabel.text = configuration.name
         }
     }
-    
+
     init(configuration: UIContentConfiguration) {
         self.configuration = configuration
         super.init(frame: .zero)
         setupConstraints()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     private func setupConstraints() {
         addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
