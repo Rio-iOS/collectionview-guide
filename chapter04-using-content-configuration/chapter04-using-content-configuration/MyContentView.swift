@@ -1,10 +1,3 @@
-//
-//  MyContentView.swift
-//  chapter04-using-content-configuration
-//
-//  Created by 藤門莉生 on 2024/08/04.
-//
-
 import Foundation
 import UIKit
 
@@ -36,7 +29,7 @@ final class MyContentView: UIView, UIContentView {
     // didSetで内部ビューに表示データを反映
     // UICollectionViewCellのサブクラスを作る方法と比較すると、
     // 実装ミスが起こりにくくなっている。
-    // UICollectionViewCellのcontentVieプロパティを意識する必要がなく、
+    // UICollectionViewCellのcontentViewプロパティを意識する必要がなく、
     // 普通のビューを作るように実装できる。
     // また、データの受け渡しの方法も configurationとしてまとめられている。
     var configuration: UIContentConfiguration {
@@ -48,7 +41,7 @@ final class MyContentView: UIView, UIContentView {
         }
     }
    
-    //  今回の実装では、イニシャライザでconfiugrationを受け取れるようにしている。
+    //  今回の実装では、イニシャライザでconfigurationを受け取れるようにしている。
     init(configuration: UIContentConfiguration) {
         self.configuration = configuration
         super.init(frame: .zero)

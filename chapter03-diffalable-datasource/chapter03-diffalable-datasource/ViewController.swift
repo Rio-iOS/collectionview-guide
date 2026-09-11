@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  chapter03-diffalable-datasource
-//
-//  Created by 藤門莉生 on 2024/07/25.
-//
-
 import UIKit
 
 final class MyViewController: UIViewController {

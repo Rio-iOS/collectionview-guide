@@ -1,14 +1,7 @@
-//
-//  MyCollectionViewDataSource.swift
-//  chapter02-horizontal
-//
-//  Created by 藤門莉生 on 2024/07/22.
-//
-
 import Foundation
 import UIKit
 
-// UICollectionDataSource: UICollectionViewに表示する内容を指定するためのプロトコル
+// UICollectionViewDataSource: UICollectionViewに表示する内容を指定するためのプロトコル
 class MyCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     private weak var repository: MyItemRepository!
     

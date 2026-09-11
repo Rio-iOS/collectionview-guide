@@ -1,10 +1,3 @@
-//
-//  MyCollectionViewCell.swift
-//  chapter03
-//
-//  Created by 藤門莉生 on 2024/07/25.
-//
-
 import Foundation
 import UIKit
 

@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  chapter04-using-cell-registration
-//
-//  Created by 藤門莉生 on 2024/08/04.
-//
-
 import UIKit
 
 final class MyViewController: UIViewController {

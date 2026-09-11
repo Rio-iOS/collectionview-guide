@@ -1,14 +1,7 @@
-//
-//  MyCollectionViewDataSource.swift
-//  chapter02
-//
-//  Created by 藤門莉生 on 2024/07/22.
-//
-
 import Foundation
 import UIKit
 
-// UICollectionDataSource: UICollectionViewに表示する内容を指定するためのプロトコル
+// UICollectionViewDataSource: UICollectionViewに表示する内容を指定するためのプロトコル
 // プロトコルなので実装クラスを作る必要がある。
 // 予め用意されている実装クラスであるUICollectionViewDiffableDataSourceを使うことができる。
 class MyCollectionViewDataSource: NSObject, UICollectionViewDataSource {

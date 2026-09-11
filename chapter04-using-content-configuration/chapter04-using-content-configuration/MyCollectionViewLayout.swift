@@ -1,10 +1,3 @@
-//
-//  MyCollectionViewLayout.swift
-//  chapter04-using-content-configuration
-//
-//  Created by 藤門莉生 on 2024/08/04.
-//
-
 import Foundation
 import UIKit
 

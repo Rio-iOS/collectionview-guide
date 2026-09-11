@@ -1,18 +1,10 @@
-//
-//  MyCollectionViewLayout.swift
-//  chapter02-horizontal
-//
-//  Created by 藤門莉生 on 2024/07/22.
-//
-
 import Foundation
 import UIKit
 
 extension MyViewController {
-    /// 高さ44ptで横幅が画面いっぱいのアイテムを横に並べる
-    /// Section > Group > Item
-    /// セクションは複数指定できる
-    /// グループは入れ子にしたり、複数のアイテムを含めたりして柔軟なレイアウトを作れる
+    /// 300×150ptのアイテムを、グループ単位で中央に揃えて横スクロールするレイアウトを返します。
+    ///
+    /// 1つのセクションに、アイテムを1つ含むグループを配置します。
     func makeCollectionViewLayout() -> UICollectionViewLayout {
         
         let itemSize = NSCollectionLayoutSize(

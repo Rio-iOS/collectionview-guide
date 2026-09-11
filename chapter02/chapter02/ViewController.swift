@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  chapter02
-//
-//  Created by 藤門莉生 on 2024/07/22.
-//
-
 import UIKit
 
 final class MyViewController: UIViewController {

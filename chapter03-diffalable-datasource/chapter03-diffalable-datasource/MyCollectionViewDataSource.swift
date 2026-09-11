@@ -1,10 +1,3 @@
-//
-//  MyCollectionViewDataSource.swift
-//  chapter03-diffalable-datasource
-//
-//  Created by 藤門莉生 on 2024/07/26.
-//
-
 import Foundation
 import UIKit
 

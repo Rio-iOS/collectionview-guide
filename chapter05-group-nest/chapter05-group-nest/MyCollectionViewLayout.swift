@@ -1,15 +1,8 @@
-//
-//  MyCollectionViewLayout.swift
-//  chapter05-group-nest
-//
-//  Created by 藤門莉生 on 2024/08/04.
-//
-
 import Foundation
 import UIKit
 
 extension MyViewController {
-    // ネストを使う場合は、fractinalWidthやfractionalHeightの指定が
+    // ネストを使う場合は、fractionalWidthやfractionalHeightの指定が
     // 親グループに対する割合となることに注意する。
     // 考え方としては、一番外側のグループのサイズから考えていくと分かりやすい
     func makeCollectionViewLayout() -> UICollectionViewLayout {
